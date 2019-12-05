@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Untitled Document</title>
+<head>
+	<style>
+    .box2{
+	
+  transform: perspective(600px) rotateY(0deg);
+  border: 5px solid red;
+	transition:all 1.5s;
+	max-width:400px;
+	box-sizing:border-box;
+	overflow: hidden;
+	margin:0 auto;
+
+}
+
+.img1{
+	max-width:100%;
+	height:auto;	
+	display:block !important;
+	transition:all 1.5s;
+	pointer-events: none;
+}
+.box2:hover{
+	/* perspective function in transform property */
+  max-width:400px;
+	box-sizing:border-box;
+	border: 5px solid red;
+  overflow:hidden;
+  transform: perspective(600px) rotateY(15deg);
+  transition:all 1.5s;
+	margin:0 auto;
+	
+}
+
+    </style>
+</head>
+</body>
+<div class="box2">
+<img src="Ajay-Gahlaut-7.jpg" alt="Ajay Gahlaut" class="img1">
+</div>
+
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+
+<script>
+$(document).ready(function(){
+  $(".img1").hover(function(){
+    $(this).parent().removeClass("box2").addClass("box8");
+  });
+
+$(".img1").on('mouseleave', function(e){
+    $(this).parent().removeClass("box8").addClass("box2");
+  });
+
+});
+</script>
+
+
+</head>
+</html>
